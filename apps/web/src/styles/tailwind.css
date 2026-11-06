@@ -1,0 +1,20 @@
+/* Tailwind v4 entry. Tailwind puts its own styles in CASCADE LAYERS (theme, base, utilities). Our own CSS
+   (index.css and the *.module.css files) is UNLAYERED, and unlayered CSS always beats layered CSS, so our
+   existing pages keep their look and Tailwind utilities only apply where we use them. */
+@import "tailwindcss";
+
+/* Map our design tokens into Tailwind, so utilities and the rest of the app share ONE source of truth:
+   bg-app-surface, text-app-muted, border-app-border, ... They reference the CSS variables from tokens.css, so
+   the dark theme (redefined under prefers-color-scheme) works automatically. */
+@theme {
+  --color-app-bg: var(--color-bg);
+  --color-app-surface: var(--color-surface);
+  --color-app-text: var(--color-text);
+  --color-app-muted: var(--color-text-muted);
+  --color-app-border: var(--color-border);
+  --color-app-control-border: var(--color-control-border);
+  --color-app-primary: var(--color-primary);
+  --color-app-primary-hover: var(--color-primary-hover);
+  --color-app-primary-text: var(--color-primary-text);
+  --color-app-danger: var(--color-danger);
+}

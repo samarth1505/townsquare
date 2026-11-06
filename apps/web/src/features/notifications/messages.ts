@@ -1,0 +1,15 @@
+export const NOTIFICATION_MESSAGES = {
+  bell: "Notifications",
+  bellWithCount: (count: number) => `Notifications, ${count} unread`,
+  overflowBadge: "99+",
+  panelTitle: "Notifications",
+  markAllRead: "Mark all as read",
+  empty: "You're all caught up.",
+  loadError: "Couldn't load notifications.",
+  retry: "Try again",
+  unread: "Unread",
+  saveFailed: "Couldn't mark it as read. Please try again.",
+  reconnecting: "Live updates paused. Reconnecting…",
+  live: "Live updates on",
+  offline: "You're offline. Showing your saved notifications.",
+} as const;

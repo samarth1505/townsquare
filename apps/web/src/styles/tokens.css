@@ -1,0 +1,39 @@
+/* Design tokens: every colour, space and radius used by the app lives here, once.
+   Components use var(--token) and never hard-code values, so a theme change is one file. */
+:root {
+  --color-bg: #f4f6f9;
+  --color-surface: #ffffff;
+  --color-text: #1b1f24;
+  --color-text-muted: #5b6573;
+  --color-border: #d5dbe3; /* decorative lines (cards, dividers) */
+  --color-control-border: #737d8c; /* the edge of inputs and buttons: needs 3:1 contrast to be seen */
+  --color-primary: #3b5bdb;
+  --color-primary-hover: #324ac0;
+  --color-primary-text: #ffffff;
+  --color-danger: #c92a2a;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  --radius: 8px;
+  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #12151a;
+    --color-surface: #1c2027;
+    --color-text: #e8ebf0;
+    --color-text-muted: #9aa5b4;
+    --color-border: #343b47;
+    --color-control-border: #79859a;
+    --color-primary: #748ffc;
+    --color-primary-hover: #91a7ff;
+    --color-primary-text: #0f1320;
+    --color-danger: #ff8787;
+  }
+}

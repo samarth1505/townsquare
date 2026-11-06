@@ -1,0 +1,38 @@
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.stats {
+  margin: 0 0 var(--space-3);
+  color: var(--color-text-muted);
+}
+
+.scroller {
+  height: 480px;
+  overflow: auto; /* this element scrolls; the list lives inside it */
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.row {
+  box-sizing: border-box;
+  height: 72px;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rowTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.rowText {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}

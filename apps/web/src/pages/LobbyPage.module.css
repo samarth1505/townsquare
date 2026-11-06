@@ -1,0 +1,13 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px; /* feed column + right rail */
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* Narrow screens: the right rail drops below the feed */
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

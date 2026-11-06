@@ -1,0 +1,69 @@
+@import "./styles/tokens.css";
+@import "./styles/tailwind.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+/* Visible keyboard focus everywhere (accessibility). */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+/* People who ask their system for less motion (vestibular disorders, motion sickness) get none: skeleton pulses,
+   spinners and transitions are reduced to a single instant frame. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Tailwind's reset ("preflight") strips the browser's default heading sizes, paragraph margins and link
+   underlines. Our pages rely on them, so they are restored here, explicitly, matching the browser defaults.
+   They live INSIDE `@layer base` on purpose: they beat Tailwind's reset (same layer, later wins) but LOSE to
+   Tailwind utilities, so `text-sm` on an <h2> still works. (Unlayered CSS would beat every utility.)
+   CSS Modules are unlayered, so they still beat these element defaults. */
+@layer base {
+  h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-block: 0.67em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-block: 0.83em;
+  }
+
+  h3 {
+    font-size: 1.17em;
+    font-weight: 700;
+    margin-block: 1em;
+  }
+
+  p {
+    margin-block: 1em;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
