@@ -1,0 +1,29 @@
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+build/
+.next/
+.expo/
+.DS_Store
+coverage/
+*.log
+
+# personal editor settings (practice-mode toggle)
+.vscode/
+
+# Next.js generated files
+next-env.d.ts
+*.tsbuildinfo
+
+# React Native native projects are GENERATED from app.json by `expo prebuild` (Continuous Native Generation)
+apps/mobile/ios/
+apps/mobile/android/
+
+# Personal / local-only files: never committed, never pushed
+docs/
+CLAUDE.md
+AGENTS.md
+.claude/
+.conductor/

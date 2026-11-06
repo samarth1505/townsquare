@@ -1,0 +1,11 @@
+node_modules
+dist
+build
+.next
+.expo
+coverage
+package-lock.json
+*.md
+next-env.d.ts
+.expo
+expo-env.d.ts
